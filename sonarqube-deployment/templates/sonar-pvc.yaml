@@ -1,1 +1,11 @@
-
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sonar-pvc
+  namespace: sonarqube
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
